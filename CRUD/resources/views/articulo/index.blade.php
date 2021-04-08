@@ -7,21 +7,21 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Código</th>
-            <th>Descripción</th>
-            <th>Cantidad</th>
-            <th>Precio</th>
-            <th>Acciones</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Direccion</th>            
+            <th>Titulo</th>
+            <th>Telefono</th>
         </tr>
     </thead>
     <tbody>
         @foreach ($articulos as $articulo)
             <tr>
                 <td>{{ $articulo->id }}</td>
-                <td>{{ $articulo->codigo }}</td>
-                <td>{{ $articulo->descripcion }}</td>
-                <td>{{ $articulo->cantidad }}</td>
-                <td>{{ $articulo->precio }}</td>
+                <td>{{ $articulo->nombre }}</td>
+                <td>{{ $articulo->apellido }}</td>
+                <td>{{ $articulo->direccion}}</td>
+                <td>{{ $articulo->titulo }}</td>
                 <td>
                     <form action="{{ route('articulos.destroy', $articulo->id) }}" method="post">
                         @csrf
